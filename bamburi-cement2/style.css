@@ -6,16 +6,16 @@
 }
 
 :root {
-  --primary-dark: #1f2b33;
+  --primary-dark: #173225;
   --primary-orange: #f3b33d;
-  --primary-orange-hover: #ffc107;
-  --text-dark: #1e1e1e;
-  --text-light: #4b5565;
-  --bg-light: #fcfcfc;
+  --primary-orange-hover: #ffd168;
+  --text-dark: #1f2b28;
+  --text-light: #4f635b;
+  --bg-light: #f5f8f4;
   --bg-white: #ffffff;
-  --border-light: #edf2f7;
-  --footer-bg: #0f1a22;
-  --footer-text: #cfdeed;
+  --border-light: #dce8df;
+  --footer-bg: #13241c;
+  --footer-text: #d6e2da;
   --whatsapp-green: #25D366;
   --whatsapp-hover: #20b859;
   --call-blue: #007bff;
@@ -58,13 +58,15 @@ a {
 
 /* ===== HEADER & NAVIGATION ===== */
 .header {
-  background: var(--primary-dark);
+  background: rgba(23, 50, 37, 0.96);
   color: white;
   padding: 0.8rem 0;
   position: sticky;
   top: 0;
   z-index: 50;
   box-shadow: var(--shadow-sm);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .header-content {
@@ -85,14 +87,14 @@ a {
 
 .site-logo {
   display: block;
-  width: clamp(180px, 24vw, 320px);
+  width: clamp(150px, 20vw, 250px);
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 18px;
   background: #ffffff;
-  padding: 0.45rem 0.7rem;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  padding: 0.35rem 0.55rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
 .menu-toggle {
@@ -119,10 +121,16 @@ a {
   font-size: 1rem;
   white-space: nowrap;
   padding: 0.5rem 0;
+  color: #e7f0ea;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--primary-orange);
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid var(--primary-orange);
 }
 
 /* ===== SLIDER ===== */
@@ -372,7 +380,7 @@ a {
 }
 
 .product-desc {
-  color: #2d3a4a;
+  color: #355445;
   margin: 0.5rem 0;
   font-size: 0.95rem;
   line-height: 1.4;
@@ -835,7 +843,7 @@ a {
 
 @media (max-width: 480px) {
   .site-logo {
-    width: clamp(135px, 48vw, 190px);
+    width: clamp(135px, 44vw, 190px);
     padding: 0.3rem 0.45rem;
     border-radius: 16px;
   }
