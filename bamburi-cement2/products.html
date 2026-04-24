@@ -428,17 +428,29 @@
       });
     }
 
+    function activateTab(tabName) {
+      const target = `tab-${tabName}`;
+
+      tabs.forEach((item) => {
+        item.classList.toggle('active', item.dataset.tab === tabName);
+      });
+
+      panels.forEach((panel) => {
+        panel.classList.toggle('active', panel.id === target);
+      });
+    }
+
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
-        const target = `tab-${tab.dataset.tab}`;
-
-        tabs.forEach((item) => item.classList.remove('active'));
-        panels.forEach((panel) => panel.classList.remove('active'));
-
-        tab.classList.add('active');
-        document.getElementById(target).classList.add('active');
+        activateTab(tab.dataset.tab);
+        history.replaceState(null, '', `#tab-${tab.dataset.tab}`);
       });
     });
+
+    const initialHash = window.location.hash.replace('#tab-', '');
+    if (initialHash && document.getElementById(`tab-${initialHash}`)) {
+      activateTab(initialHash);
+    }
   </script>
 </body>
 </html>
