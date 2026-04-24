@@ -64,12 +64,12 @@
     }
 
     .city-actions .btn.secondary {
-      background: #ffffff;
+      background: var(--bg-white);
       color: var(--primary-dark);
     }
 
     .city-actions .btn.secondary:hover {
-      background: #f2f6f3;
+      background: var(--bg-light);
     }
 
     .city-main {
@@ -110,14 +110,13 @@
       border-radius: 18px;
       border: 1px solid var(--border-light);
       margin-top: 1rem;
-      -webkit-overflow-scrolling: touch;
     }
 
     .price-table {
       width: 100%;
       min-width: 460px;
       border-collapse: collapse;
-      background: #ffffff;
+      background: var(--bg-white);
       table-layout: fixed;
     }
 
@@ -130,13 +129,13 @@
     }
 
     .price-table th {
-      background: #eef6f0;
+      background: var(--surface-200);
       color: var(--primary-dark);
       font-size: 0.9rem;
     }
 
     .price-table td strong {
-      color: #198754;
+      color: var(--primary-green);
     }
 
     .price-note {
@@ -154,7 +153,7 @@
 
     .benefit-item,
     .area-item {
-      background: #f8fbf7;
+      background: var(--surface-100);
       border: 1px solid var(--border-light);
       border-radius: 20px;
       padding: 1rem 1.1rem;
@@ -168,7 +167,7 @@
 
     .benefit-item i,
     .area-item i {
-      color: #198754;
+      color: var(--primary-green);
       font-size: 1.1rem;
       margin-top: 0.15rem;
       flex-shrink: 0;
@@ -189,7 +188,7 @@
     }
 
     .faq-entry {
-      background: #f8fbf7;
+      background: var(--surface-100);
       border: 1px solid var(--border-light);
       border-radius: 18px;
       overflow: hidden;
@@ -229,7 +228,7 @@
 
     .city-cta {
       text-align: center;
-      background: linear-gradient(135deg, #173225, #198754);
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary-green));
       color: #ffffff;
     }
 
@@ -343,6 +342,70 @@
     }
 
     @media (max-width: 480px) {
+      .price-table-wrap {
+        overflow-x: visible;
+        border: 0;
+        border-radius: 0;
+      }
+
+      .price-table,
+      .price-table tbody,
+      .price-table tr,
+      .price-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .price-table {
+        min-width: 0;
+        background: transparent;
+      }
+
+      .price-table thead {
+        display: none;
+      }
+
+      .price-table tr {
+        margin-bottom: 0.85rem;
+        border: 1px solid var(--border-light);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--bg-white);
+      }
+
+      .price-table td {
+        min-width: 0;
+        border-bottom: 1px solid var(--border-light);
+        padding: 0.8rem 0.95rem;
+        font-size: 0.84rem;
+      }
+
+      .price-table td:last-child {
+        border-bottom: 0;
+      }
+
+      .price-table td::before {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--primary-dark);
+      }
+
+      .price-table td:nth-child(1)::before {
+        content: 'Product';
+      }
+
+      .price-table td:nth-child(2)::before {
+        content: 'Bag Size';
+      }
+
+      .price-table td:nth-child(3)::before {
+        content: 'Price';
+      }
+
       .city-main {
         padding-top: 2rem;
       }
@@ -363,20 +426,6 @@
       .benefit-item,
       .area-item {
         border-radius: 20px;
-      }
-
-      .price-table {
-        min-width: 360px;
-      }
-
-      .price-table th,
-      .price-table td {
-        padding: 0.62rem 0.55rem;
-        font-size: 0.8rem;
-      }
-
-      .price-table th {
-        font-size: 0.78rem;
       }
 
       .benefit-item,

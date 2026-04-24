@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     * {
       margin: 0;
@@ -19,15 +20,15 @@
     }
 
     :root {
-      --primary-dark: #173225;
-      --primary-green: #198754;
-      --primary-green-soft: #e8f4ec;
-      --primary-accent: #f3b33d;
-      --text-dark: #1f2b28;
-      --text-soft: #4f635b;
-      --surface: #ffffff;
-      --surface-muted: #f5f8f4;
-      --border: #dce8df;
+      --primary-dark: var(--brand-green-900);
+      --primary-green: var(--brand-green-700);
+      --primary-green-soft: var(--brand-green-100);
+      --primary-accent: var(--brand-orange-500);
+      --text-dark: var(--text-900);
+      --text-soft: var(--text-600);
+      --surface: var(--surface-0);
+      --surface-muted: var(--surface-50);
+      --border: var(--border-200);
       --shadow: 0 18px 36px rgba(0, 0, 0, 0.08);
       --radius-lg: 28px;
       --radius-md: 20px;
@@ -674,6 +675,22 @@
       .value-item,
       .leader-card {
         border-radius: 20px;
+      }
+
+      .floating-wa,
+      .floating-call {
+        width: 52px;
+        height: 52px;
+        right: 10px;
+        font-size: 1.55rem;
+      }
+
+      .floating-wa {
+        bottom: 10px;
+      }
+
+      .floating-call {
+        bottom: 68px;
       }
     }
   </style>

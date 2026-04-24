@@ -6,20 +6,34 @@
 }
 
 :root {
-  --primary-dark: #173225;
-  --primary-orange: #f3b33d;
-  --primary-orange-hover: #ffd168;
-  --text-dark: #1f2b28;
-  --text-light: #4f635b;
-  --bg-light: #f5f8f4;
-  --bg-white: #ffffff;
-  --border-light: #dce8df;
+  --brand-green-900: #173225;
+  --brand-green-700: #198754;
+  --brand-green-100: #e8f4ec;
+  --brand-orange-500: #f3b33d;
+  --brand-orange-400: #ffd168;
+  --text-900: #1f2b28;
+  --text-600: #4f635b;
+  --surface-0: #ffffff;
+  --surface-50: #f5f8f4;
+  --surface-100: #f8fbf7;
+  --surface-200: #eef6f0;
+  --border-200: #dce8df;
   --footer-bg: #13241c;
   --footer-text: #d6e2da;
   --whatsapp-green: #25D366;
   --whatsapp-hover: #20b859;
   --call-blue: #007bff;
   --call-hover: #0056b3;
+  --primary-dark: var(--brand-green-900);
+  --primary-green: var(--brand-green-700);
+  --primary-green-soft: var(--brand-green-100);
+  --primary-orange: var(--brand-orange-500);
+  --primary-orange-hover: var(--brand-orange-400);
+  --text-dark: var(--text-900);
+  --text-light: var(--text-600);
+  --bg-light: var(--surface-50);
+  --bg-white: var(--surface-0);
+  --border-light: var(--border-200);
   --shadow-sm: 0 4px 20px rgba(0,0,0,0.08);
   --shadow-md: 0 20px 30px -10px rgba(0,0,0,0.2);
   --shadow-lg: 0 24px 40px rgba(0,0,0,0.08);
@@ -599,7 +613,7 @@ a {
 }
 
 .faq-item[open] summary::after {
-  content: "−";
+  content: "-";
 }
 
 .faq-answer {
@@ -1029,6 +1043,10 @@ a {
     border-radius: 22px;
   }
 
+  .slider-arrow {
+    display: none;
+  }
+
   .slide {
     padding: 1.15rem 1rem 1.5rem;
   }
@@ -1087,6 +1105,22 @@ a {
 
   .footer {
     padding-bottom: 6rem;
+  }
+
+  .floating-wa,
+  .floating-call {
+    width: 52px;
+    height: 52px;
+    right: 10px;
+    font-size: 1.55rem;
+  }
+
+  .floating-wa {
+    bottom: 10px;
+  }
+
+  .floating-call {
+    bottom: 68px;
   }
 }
 
