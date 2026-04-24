@@ -4,14 +4,14 @@
   
   // Product data with Unsplash images
   const products = [
-    { name: "Fundi Cement", brand: "Fundi", specs: "32.5R · 50kg", desc: "Designed for masonry, block making, and plastering.", price: "KES 650", image: "bamburi fundi.jpeg" },
-    { name: "Tembo Cement", brand: "Tembo", specs: "42.5N · 50kg", desc: "Extra strength for heavy load structures.", price: "KES 690", image: "bamburi tembo.jpeg" },
-    { name: "Nguvu Cement", brand: "Nguvu", specs: "42.5R · 50kg", desc: "High early strength – fast formwork removal.", price: "KES 740", image: "bamburi nguvu.jpeg" },
-    { name: "Powermax", brand: "Powermax", specs: "52.5N · 50kg", desc: "Premium for high-rise & precast.", price: "KES 950", image: "bamburi powermax.jpeg" },
-    { name: "Duracem", brand: "Duracem", specs: "42.5N · 50kg (sulphate resistant)", desc: "For marine & aggressive soil.", price: "KES 1,050", image: "bamburi duracem.jpeg" },
-    { name: "Powerplus", brand: "Powerplus", specs: "52.5R · 50kg", desc: "Ultra-high strength, 1-day curing.", price: "KES 1,000", image: "bamburi power plus.jpeg" },
+    { name: "Fundi Cement", brand: "Fundi", specs: "32.5R - 50kg", desc: "Designed for masonry, block making, and plastering.", price: "KES 650", image: "bamburi fundi.jpeg" },
+    { name: "Tembo Cement", brand: "Tembo", specs: "42.5N - 50kg", desc: "Extra strength for heavy load structures.", price: "KES 690", image: "bamburi tembo.jpeg" },
+    { name: "Nguvu Cement", brand: "Nguvu", specs: "42.5R - 50kg", desc: "High early strength - fast formwork removal.", price: "KES 740", image: "bamburi nguvu.jpeg" },
+    { name: "Powermax", brand: "Powermax", specs: "52.5N - 50kg", desc: "Premium for high-rise & precast.", price: "KES 950", image: "bamburi powermax.jpeg" },
+    { name: "Duracem", brand: "Duracem", specs: "42.5N - 50kg (sulphate resistant)", desc: "For marine & aggressive soil.", price: "KES 1,050", image: "bamburi duracem.jpeg" },
+    { name: "Powerplus", brand: "Powerplus", specs: "52.5R - 50kg", desc: "Ultra-high strength, 1-day curing.", price: "KES 1,000", image: "bamburi power plus.jpeg" },
     { name: "Powercrete", brand: "Powercrete", specs: "42.5R (blended)", desc: "Low heat, ideal for mass concrete.", price: "KES 1,250", image: "bamburi powercrete.jpeg" },
-    { name: "Seti 300", brand: "Seti 300", specs: "32.5N · 25kg (easy)", desc: "high-performance, 25kg cementitious adhesive designed for fixing ceramic, terracotta, and natural stone tiles on internal walls and floors.", price: "KES 400", image: "bamburi seti 300.jpeg" }
+    { name: "Seti 300", brand: "Seti 300", specs: "32.5N - 25kg (easy)", desc: "High-performance, 25kg cementitious adhesive designed for fixing ceramic, terracotta, and natural stone tiles on internal walls and floors.", price: "KES 400", image: "bamburi seti 300.jpeg" }
   ];
 
   function renderProducts() {
@@ -30,7 +30,7 @@
           </div>
           <div class="product-details">
             <h3 class="product-name">${p.name}</h3>
-            <div class="product-spec"><span>${p.brand}</span> <span>⚡ ${p.specs}</span></div>
+            <div class="product-spec"><span>${p.brand}</span> <span>Spec: ${p.specs}</span></div>
             <p class="product-desc">${p.desc}</p>
             <div class="product-price">${p.price} <small>per bag</small></div>
             <button class="contact-order" onclick="window.open('https://wa.me/254750210207?text=${encodeURIComponent('Hello, I am interested in ' + p.name)}', '_blank')">
