@@ -549,6 +549,65 @@ a {
   font-size: 0.9rem;
 }
 
+/* ===== FAQ SECTION ===== */
+.faq-section {
+  margin: 3rem 0;
+}
+
+.faq-intro {
+  max-width: 70ch;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.faq-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.15rem 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--primary-orange);
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-answer {
+  padding: 0 1.2rem 1.2rem;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
 /* ===== CONTACT SECTION ===== */
 .contact-block {
   display: flex;
@@ -898,13 +957,15 @@ a {
   .products-grid,
   .info-grid,
   .testimonials-grid,
+  .faq-grid,
   .footer-grid {
     gap: 1.25rem;
   }
 
   .product-card,
   .info-card,
-  .testimonial-card {
+  .testimonial-card,
+  .faq-item {
     border-radius: 20px;
   }
 
@@ -933,6 +994,10 @@ a {
   
   .testimonials-grid {
     gap: 1rem;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
 
   .footer-grid {
@@ -1008,6 +1073,16 @@ a {
 
   .product-price {
     font-size: 1.25rem;
+  }
+
+  .faq-item summary {
+    padding: 1rem;
+    font-size: 0.98rem;
+  }
+
+  .faq-answer {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
   }
 
   .footer {
