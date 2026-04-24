@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bamburi Cement | About Us</title>
+  <!-- Google Fonts for clean typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1e2a3e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* container utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header / navigation (simple, elegant) */
+    .site-header {
+      background: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(0px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 2rem;
+      color: #2b7a3e;
+    }
+
+    .logo-text {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #1f3b2c;
+    }
+
+    .logo-text span {
+      color: #2b7a3e;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c3e3f;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #2b7a3e;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #2b7a3e;
+      padding-bottom: 4px;
+    }
+
+    /* HERO SECTION (About intro) */
+    .hero-about {
+      background: linear-gradient(105deg, #f4f9f4 0%, #eef3ea 100%);
+      padding: 80px 0 70px;
+      border-bottom: 1px solid #dce8da;
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .hero-content {
+      flex: 1.2;
+    }
+
+    .hero-badge {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2b7a3e;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #1a3a2b;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-content .highlight {
+      color: #2b7a3e;
+      border-bottom: 3px solid #cbe5cd;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #2c4b3e;
+      margin-bottom: 28px;
+      max-width: 90%;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #1f543b;
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #4b6b58;
+    }
+
+    .hero-image {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* mission + vision cards */
+    .mission-vision {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1a3a2b;
+      margin-bottom: 16px;
+    }
+
+    .section-subhead {
+      text-align: center;
+      color: #5a7c68;
+      max-width: 700px;
+      margin: 0 auto 48px auto;
+      font-size: 1.1rem;
+    }
+
+    .mv-grid {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .mv-card {
+      flex: 1;
+      min-width: 260px;
+      background: #fafef8;
+      border-radius: 28px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: all 0.25s ease;
+      border: 1px solid #e2efdf;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    .mv-card:hover {
+      transform: translateY(-6px);
+      border-color: #bfdfb5;
+      box-shadow: 0 20px 30px -12px rgba(43, 122, 62, 0.12);
+    }
+
+    .mv-icon {
+      font-size: 3rem;
+      color: #2b7a3e;
+      margin-bottom: 24px;
+    }
+
+    .mv-card h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #224f36;
+    }
+
+    .mv-card p {
+      color: #2f4d3e;
+      line-height: 1.6;
+    }
+
+    /* our story / heritage */
+    .our-story {
+      background: #f7fbf5;
+      padding: 80px 0;
+    }
+
+    .story-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .story-text {
+      flex: 1.2;
+    }
+
+    .story-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #1b402e;
+    }
+
+    .story-text p {
+      margin-bottom: 20px;
+      color: #2e5542;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .signature {
+      margin-top: 28px;
+      font-style: italic;
+      border-left: 4px solid #2b7a3e;
+      padding-left: 24px;
+      color: #3e6a53;
+      font-weight: 500;
+    }
+
+    .story-image {
+      flex: 1;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -15px rgba(0, 0, 0, 0.1);
+    }
+
+    .story-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* values section */
+    .values-section {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .values-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .value-item {
+      flex: 1 1 220px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 32px 20px;
+      text-align: center;
+      transition: all 0.2s;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e7f0e3;
+    }
+
+    .value-item i {
+      font-size: 2.5rem;
+      color: #2b7a3e;
+      margin-bottom: 20px;
+    }
+
+    .value-item h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #1f472f;
+    }
+
+    .value-item p {
+      color: #486e59;
+      font-size: 0.95rem;
+    }
+
+    /* leadership teaser / key figures */
+    .leadership {
+      background: #eef4ea;
+      padding: 70px 0;
+    }
+
+    .leadership-inner {
+      text-align: center;
+    }
+
+    .leadership-inner h2 {
+      font-size: 2rem;
+      margin-bottom: 48px;
+      color: #1b402e;
+    }
+
+    .leaders-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 48px;
+    }
+
+    .leader-card {
+      background: white;
+      border-radius: 40px;
+      width: 260px;
+      padding: 28px 16px 24px;
+      text-align: center;
+      transition: 0.2s;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .leader-img {
+      background: #ddecd6;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 3rem;
+      color: #2b7a3e;
+    }
+
+    .leader-card h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .leader-title {
+      font-size: 0.85rem;
+      color: #2b7a3e;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .leader-bio {
+      font-size: 0.9rem;
+      color: #3d5e4c;
+      margin-top: 12px;
+      padding: 0 8px;
+    }
+
+    /* sustainability callout */
+    .sustainability {
+      padding: 60px 0 80px;
+      background: linear-gradient(120deg, #ffffff 0%, #fcfef9 100%);
+      text-align: center;
+    }
+
+    .sustainability .container {
+      max-width: 900px;
+    }
+
+    .sustainability h3 {
+      font-size: 1.9rem;
+      color: #1f3b2c;
+      margin-bottom: 20px;
+    }
+
+    .sustainability p {
+      font-size: 1.05rem;
+      color: #3b604b;
+      margin-bottom: 30px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid #2b7a3e;
+      color: #2b7a3e;
+      background: transparent;
+      transition: 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: #2b7a3e;
+      color: white;
+    }
+
+    /* footer */
+    .footer {
+      background: #13241c;
+      color: #cfdfd6;
+      padding: 48px 0 32px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col p {
+      margin-top: 12px;
+      max-width: 280px;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .footer-col h4 {
+      color: #e0f0df;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #c0d4c0;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .social-icons a {
+      color: #c0d4c0;
+      font-size: 1.3rem;
+      transition: 0.2s;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 28px;
+      border-top: 1px solid #2d463b;
+      font-size: 0.8rem;
+    }
+
+    /* responsive */
+    @media (max-width: 850px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+      .hero-content p {
+        max-width: 100%;
+      }
+      .hero-grid {
+        flex-direction: column-reverse;
+      }
+      .story-grid {
+        flex-direction: column;
+      }
+      .container {
+        padding: 0 24px;
+      }
+      .mv-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo-area">
+          <i class="fas fa-hard-hat logo-icon"></i>
+          <div class="logo-text">Bamburi<span>Cement</span></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">About Us</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero about section -->
+    <section class="hero-about">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-leaf"></i> Building a sustainable future</span>
+            <h1>Shaping Kenya’s <span class="highlight">landscape</span> <br> since 1951</h1>
+            <p>Bamburi Cement is East Africa’s leading building & construction solutions provider, innovating with purpose and engineering excellence. We don’t just lay foundations — we build communities, empower economies, and protect our planet.</p>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">70+</span>
+                <span class="stat-label">Years of excellence</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">2.2M+</span>
+                <span class="stat-label">Tonnes capacity/year</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Direct employees</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="https://placehold.co/600x450/eef3ea/2c5a3e?text=Bamburi+Cement+Plant" alt="Bamburi Cement aerial view" onerror="this.src='https://via.placeholder.com/600x450/DAEED9/2B5E3E?text=Bamburi+Facility'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Cards -->
+    <section class="mission-vision">
+      <div class="container">
+        <h2 class="section-title">Our Compass</h2>
+        <p class="section-subhead">Guided by purpose, driven by innovation — delivering strength for generations.</p>
+        <div class="mv-grid">
+          <div class="mv-card">
+            <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+            <h3>Mission</h3>
+            <p>To provide superior cement and concrete solutions while fostering environmental stewardship, operational excellence, and lasting value for our stakeholders across East Africa.</p>
+          </div>
+          <div class="mv-card">
+            <div class="mv-icon"><i class="fas fa-eye"></i></div>
+            <h3>Vision</h3>
+            <p>To be the undisputed leader in sustainable construction materials, shaping a resilient and green built environment for Africa's urban future.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story / Heritage -->
+    <section class="our-story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-text">
+            <h2><i class="fas fa-timeline"></i> A Legacy of Strength</h2>
+            <p>Founded in 1951, Bamburi Cement began operations in Mombasa with a single kiln and a bold vision to fuel Kenya's post-independence infrastructure boom. Over seven decades, we have grown into a powerhouse of innovation: from pioneering eco-friendly cement blends to championing circular economy models through our LafargeHolcim (now Holcim Group) affiliation.</p>
+            <p>Today, our state-of-the-art plant in Bamburi, Mombasa, produces world-class cements that have built iconic landmarks, housing projects, roads, and dams across East Africa. Our commitment to 'Green Cement' drives research into low-carbon cements, alternative fuels, and massive reforestation programs around quarries — turning exhausted mining sites into thriving ecological parks.</p>
+            <div class="signature">
+              <i class="fas fa-quote-left"></i> Building Kenya, one sustainable foundation at a time.
+            </div>
+          </div>
+          <div class="story-image">
+            <img src="https://placehold.co/550x400/EBF2E4/2B5E3E?text=Historic+Bamburi+Plant" alt="Bamburi history image" onerror="this.src='https://via.placeholder.com/550x400/DCEED7/2B5E2B?text=Bamburi+Heritage'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="values-section">
+      <div class="container">
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-subhead">The principles that define our actions and relationships.</p>
+        <div class="values-grid">
+          <div class="value-item">
+            <i class="fas fa-shield-alt"></i>
+            <h4>Integrity</h4>
+            <p>Transparency and ethics in every decision, building trust with partners and communities.</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-recycle"></i>
+            <h4>Sustainability</h4>
+            <p>Driving circular construction, reducing CO₂, and restoring biodiversity in quarry areas.</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Innovation</h4>
+            <p>Investing in R&D for low-carbon cements, digital solutions, and advanced materials.</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-handshake"></i>
+            <h4>Collaboration</h4>
+            <p>Partnering with governments, architects, and SMEs to empower local economies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership spotlight -->
+    <section class="leadership">
+      <div class="container leadership-inner">
+        <h2><i class="fas fa-users"></i> Leadership & Direction</h2>
+        <div class="leaders-flex">
+          <div class="leader-card">
+            <div class="leader-img"><i class="fas fa-user-tie fa-3x"></i></div>
+            <h4>Anne K. Mwangi</h4>
+            <div class="leader-title">Managing Director</div>
+            <p class="leader-bio">Over 20 years in heavy industry, championing green transition and operational excellence.</p>
+          </div>
+          <div class="leader-card">
+            <div class="leader-img"><i class="fas fa-chart-line fa-3x"></i></div>
+            <h4>James Omondi</h4>
+            <div class="leader-title">CFO & Strategy</div>
+            <p class="leader-bio">Driving financial resilience and sustainable investments across East Africa.</p>
+          </div>
+          <div class="leader-card">
+            <div class="leader-img"><i class="fas fa-tree fa-3x"></i></div>
+            <h4>Dr. Fatima Suleiman</h4>
+            <div class="leader-title">Head of Sustainability</div>
+            <p class="leader-bio">Architect of Bamburi's award-winning quarry restoration & biodiversity programs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability highlight / call to action -->
+    <section class="sustainability">
+      <div class="container">
+        <i class="fas fa-globe-africa" style="font-size: 2.8rem; color: #2b7a3e; margin-bottom: 16px; display: inline-block;"></i>
+        <h3>Committed to Net Zero by 2050</h3>
+        <p>Through alternative fuels, carbon capture ready technologies, and reforestation, we are reducing our clinker factor and pioneering ECOPlanet® green cement range in the region. Our Bamburi quarry now hosts nature trails and wetlands — a model for industrial ecology.</p>
+        <a href="#" class="btn-outline">Discover Our Green Journey <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-area" style="color: white; margin-bottom: 10px;">
+            <i class="fas fa-hard-hat logo-icon" style="color: #8bc48f;"></i>
+            <div class="logo-text" style="color: white;">Bamburi<span style="color: #9fdfa8;">Cement</span></div>
+          </div>
+          <p>Building dreams, strengthening communities. Eco-friendly cement solutions for a resilient Africa.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Bamburi</a></li>
+            <li><a href="#">Sustainability reports</a></li>
+            <li><a href="#">Product portfolio</a></li>
+            <li><a href="#">Innovation hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Bamburi, Mombasa Road, Kenya</li>
+            <li><i class="fas fa-phone-alt"></i> +254 709 111 000</li>
+            <li><i class="fas fa-envelope"></i> info@bamburicement.co.ke</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Bamburi Cement Limited. Committed to sustainable construction | All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
