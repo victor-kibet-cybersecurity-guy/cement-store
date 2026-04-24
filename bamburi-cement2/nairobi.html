@@ -115,22 +115,24 @@
 
     .price-table {
       width: 100%;
-      min-width: 520px;
+      min-width: 460px;
       border-collapse: collapse;
       background: #ffffff;
+      table-layout: fixed;
     }
 
     .price-table th,
     .price-table td {
-      padding: 0.95rem 1rem;
+      padding: 0.8rem 0.85rem;
       text-align: left;
       border-bottom: 1px solid var(--border-light);
+      font-size: 0.94rem;
     }
 
     .price-table th {
       background: #eef6f0;
       color: var(--primary-dark);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     .price-table td strong {
@@ -259,7 +261,7 @@
       }
 
       .price-table {
-        min-width: 480px;
+        min-width: 430px;
       }
 
       .benefits-grid,
@@ -271,6 +273,10 @@
     @media (max-width: 768px) {
       .city-hero {
         padding: 2.5rem 0 2rem;
+      }
+
+      .city-hero-inner {
+        max-width: 100%;
       }
 
       .city-badge {
@@ -307,12 +313,28 @@
       }
 
       .price-table-wrap {
-        margin-inline: -0.15rem;
+        margin-inline: 0;
       }
 
       .price-table th,
       .price-table td {
-        padding: 0.85rem 0.9rem;
+        padding: 0.72rem 0.7rem;
+        font-size: 0.88rem;
+      }
+
+      .price-table th:nth-child(1),
+      .price-table td:nth-child(1) {
+        width: 42%;
+      }
+
+      .price-table th:nth-child(2),
+      .price-table td:nth-child(2) {
+        width: 22%;
+      }
+
+      .price-table th:nth-child(3),
+      .price-table td:nth-child(3) {
+        width: 36%;
       }
 
       .benefit-item {
@@ -344,13 +366,17 @@
       }
 
       .price-table {
-        min-width: 420px;
+        min-width: 360px;
       }
 
       .price-table th,
       .price-table td {
-        padding: 0.8rem;
-        font-size: 0.92rem;
+        padding: 0.62rem 0.55rem;
+        font-size: 0.8rem;
+      }
+
+      .price-table th {
+        font-size: 0.78rem;
       }
 
       .benefit-item,
