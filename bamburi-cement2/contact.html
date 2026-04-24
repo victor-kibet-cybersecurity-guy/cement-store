@@ -5,6 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Bamburi Cement</title>
   <meta name="description" content="Contact Bamburi Cement for orders, quotations, delivery support, and product enquiries in Kenya.">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What types of cement do you sell in Kenya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We supply high-quality cement including Ordinary Portland Cement (OPC), Portland Pozzolana Cement (PPC), and specialized blends suitable for construction, plastering, and structural work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the price of Bamburi cement in Kenya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Current Bamburi cement prices in Kenya include: Bamburi Fundi (32.5) at KES 650, Bamburi Tembo (32.5) at KES 690, Bamburi Nguvu (32.5) at KES 740, Bamburi Powermax (42.5) at KES 950, Bamburi Duracem (42.5 MPa) at KES 1,050, Bamburi Powerplus (42.5 MPa) at KES 1,000, and Bamburi Powercrete (52.5 MPa) at KES 1,250. Prices may vary depending on location and quantity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer delivery across Kenya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide fast and reliable delivery countrywide including Nairobi, Kiambu, Nakuru, Eldoret, Kisumu and other regions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does delivery take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Delivery typically takes same day or next day within major towns. Remote areas may take 1-3 days depending on distance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I place an order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can place an order by calling us, sending a WhatsApp message, or filling out the order form on our website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you sell cement in bulk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We supply both retail per bag and bulk orders for contractors, developers and hardware stores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many bags of cement do I need for my project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This depends on your project size such as foundation, slab or plastering. Contact us with your details and we will help you estimate accurately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is your cement genuine Bamburi cement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We only supply original, high-quality Bamburi cement sourced from trusted distributors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between OPC and PPC cement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OPC sets faster and is ideal for structural works, while PPC is more durable and suitable for plastering and long-term strength."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer discounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We offer discounts for bulk purchases and repeat customers. Contact us for a custom quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the Bamburi cement contacts in Kenya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact us directly on 0750210207 for orders, inquiries, and delivery arrangements across Kenya."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I buy Bamburi cement in Kenya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can buy genuine Bamburi cement directly from us. Visit our website https://bamburicementkenya.co.ke/ or contact us on 0750210207 for fast delivery across Kenya including Nairobi, Kiambu, Nakuru, Eldoret and Kisumu."
+          }
+        }
+      ]
+    }
+  </script>
   <link rel="icon" href="favicon.jpeg" type="image/jpeg">
   <link rel="shortcut icon" href="favicon.jpeg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,6 +250,67 @@
       border-top: 1px solid var(--border-light);
     }
 
+    .contact-faq {
+      margin-top: 1.5rem;
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: 26px;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.05);
+      padding: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    .contact-faq p {
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .faq-stack {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .faq-item {
+      background: #f8fbf7;
+      border: 1px solid var(--border-light);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1rem 1.1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      flex-shrink: 0;
+      font-size: 1.35rem;
+      line-height: 1;
+      color: #198754;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 1.1rem 1.1rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
     .footer-simple {
       background: var(--footer-bg);
       color: var(--footer-text);
@@ -197,12 +362,23 @@
       }
 
       .contact-panel,
-      .contact-side-card {
+      .contact-side-card,
+      .contact-faq {
         padding: 1rem;
       }
 
       .contact-card {
         padding: 1rem;
+      }
+
+      .faq-item summary {
+        padding: 0.95rem 1rem;
+        font-size: 0.98rem;
+      }
+
+      .faq-answer {
+        padding: 0 1rem 1rem;
+        font-size: 0.95rem;
       }
 
       .contact-map-card iframe {
@@ -272,6 +448,85 @@
                 <h3>Location</h3>
                 <p>Bamburi Road, Mombasa, Kenya</p>
               </section>
+            </div>
+          </article>
+
+          <article class="contact-faq">
+            <h2>Frequently Asked Questions</h2>
+            <p>These are the latest frequently asked questions about our cement products, delivery, pricing, and ordering across Kenya.</p>
+            <div class="faq-stack">
+              <details class="faq-item">
+                <summary>What types of cement do you sell in Kenya?</summary>
+                <div class="faq-answer">
+                  <p>We supply high-quality cement including Ordinary Portland Cement (OPC), Portland Pozzolana Cement (PPC), and specialized blends suitable for construction, plastering, and structural work.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>What is the price of Bamburi cement in Kenya?</summary>
+                <div class="faq-answer">
+                  <p>Current Bamburi cement prices in Kenya include: Bamburi Fundi (32.5) at KES 650, Bamburi Tembo (32.5) at KES 690, Bamburi Nguvu (32.5) at KES 740, Bamburi Powermax (42.5) at KES 950, Bamburi Duracem (42.5 MPa) at KES 1,050, Bamburi Powerplus (42.5 MPa) at KES 1,000, and Bamburi Powercrete (52.5 MPa) at KES 1,250. Prices may vary depending on location and quantity.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Do you offer delivery across Kenya?</summary>
+                <div class="faq-answer">
+                  <p>Yes. We provide fast and reliable delivery countrywide including Nairobi, Kiambu, Nakuru, Eldoret, Kisumu and other regions.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>How long does delivery take?</summary>
+                <div class="faq-answer">
+                  <p>Delivery typically takes same day or next day within major towns. Remote areas may take 1-3 days depending on distance.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>How can I place an order?</summary>
+                <div class="faq-answer">
+                  <p>You can place an order by calling us, sending a WhatsApp message, or filling out the order form on our website.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Do you sell cement in bulk?</summary>
+                <div class="faq-answer">
+                  <p>Yes. We supply both retail per bag and bulk orders for contractors, developers and hardware stores.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>How many bags of cement do I need for my project?</summary>
+                <div class="faq-answer">
+                  <p>This depends on your project size such as foundation, slab or plastering. Contact us with your details and we will help you estimate accurately.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Is your cement genuine Bamburi cement?</summary>
+                <div class="faq-answer">
+                  <p>Yes. We only supply original, high-quality Bamburi cement sourced from trusted distributors.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>What is the difference between OPC and PPC cement?</summary>
+                <div class="faq-answer">
+                  <p>OPC sets faster and is ideal for structural works, while PPC is more durable and suitable for plastering and long-term strength.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Do you offer discounts?</summary>
+                <div class="faq-answer">
+                  <p>Yes. We offer discounts for bulk purchases and repeat customers. Contact us for a custom quote.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>What are the Bamburi cement contacts in Kenya?</summary>
+                <div class="faq-answer">
+                  <p>You can contact us directly on 0750210207 for orders, inquiries, and delivery arrangements across Kenya.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Where can I buy Bamburi cement in Kenya?</summary>
+                <div class="faq-answer">
+                  <p>You can buy genuine Bamburi cement directly from us. Visit our website https://bamburicementkenya.co.ke/ or contact us on 0750210207 for fast delivery across Kenya including Nairobi, Kiambu, Nakuru, Eldoret and Kisumu.</p>
+                </div>
+              </details>
             </div>
           </article>
 
