@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bamburi Cement Price in Nairobi | Same-Day Delivery in Nairobi</title>
-  <meta name="description" content="Buy High-quality Bamburi cement in Nairobi at the best prices. Fast same-day delivery across Nairobi. Call 0750210207 or order online now.">
+  <meta name="description" content="Buy high-quality Bamburi cement in Nairobi at the best prices. Fast same-day delivery across Nairobi. Call 0750210207 or order online now.">
   <link rel="icon" href="favicon.jpeg" type="image/jpeg">
   <link rel="shortcut icon" href="favicon.jpeg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     .city-hero {
       padding: clamp(3rem, 7vw, 5.75rem) 0 2.75rem;
       background:
-        linear-gradient(rgba(20, 36, 29, 0.7), rgba(20, 36, 29, 0.65)),
+        linear-gradient(rgba(20, 36, 29, 0.72), rgba(20, 36, 29, 0.64)),
         url("https://images.unsplash.com/photo-1581091870627-3f1c0c6c6d8d?auto=format&fit=crop&w=1600&q=80") center/cover;
       color: #ffffff;
     }
@@ -89,9 +89,12 @@
       box-shadow: 0 16px 30px rgba(0, 0, 0, 0.05);
     }
 
+    .city-card > * + * {
+      margin-top: 0.9rem;
+    }
+
     .city-card h2 {
       color: var(--primary-dark);
-      margin-bottom: 0.85rem;
       font-size: clamp(1.45rem, 3vw, 2rem);
     }
 
@@ -107,6 +110,7 @@
       border-radius: 18px;
       border: 1px solid var(--border-light);
       margin-top: 1rem;
+      -webkit-overflow-scrolling: touch;
     }
 
     .price-table {
@@ -165,6 +169,7 @@
       color: #198754;
       font-size: 1.1rem;
       margin-top: 0.15rem;
+      flex-shrink: 0;
     }
 
     .area-item {
@@ -213,7 +218,7 @@
     }
 
     .faq-entry[open] summary::after {
-      content: "−";
+      content: "-";
     }
 
     .faq-entry p {
@@ -244,9 +249,41 @@
       margin-top: 1.35rem;
     }
 
+    @media (max-width: 1024px) {
+      .city-hero {
+        padding-bottom: 2.35rem;
+      }
+
+      .city-hero-inner {
+        max-width: 680px;
+      }
+
+      .price-table {
+        min-width: 480px;
+      }
+
+      .benefits-grid,
+      .areas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+      }
+    }
+
     @media (max-width: 768px) {
       .city-hero {
-        padding-top: 2.5rem;
+        padding: 2.5rem 0 2rem;
+      }
+
+      .city-badge {
+        font-size: 0.76rem;
+        padding: 0.5rem 0.75rem;
+      }
+
+      .city-hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+      }
+
+      .city-hero p {
+        font-size: 1rem;
       }
 
       .city-actions,
@@ -259,6 +296,28 @@
         width: 100%;
         text-align: center;
       }
+
+      .city-main {
+        padding: 2rem 0 4rem;
+      }
+
+      .city-card {
+        border-radius: 22px;
+        padding: 1.2rem;
+      }
+
+      .price-table-wrap {
+        margin-inline: -0.15rem;
+      }
+
+      .price-table th,
+      .price-table td {
+        padding: 0.85rem 0.9rem;
+      }
+
+      .benefit-item {
+        padding: 0.95rem 1rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -266,10 +325,37 @@
         padding-top: 2rem;
       }
 
+      .city-hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .city-hero p {
+        font-size: 0.95rem;
+      }
+
+      .city-card {
+        padding: 1rem;
+      }
+
       .city-card,
       .benefit-item,
       .area-item {
         border-radius: 20px;
+      }
+
+      .price-table {
+        min-width: 420px;
+      }
+
+      .price-table th,
+      .price-table td {
+        padding: 0.8rem;
+        font-size: 0.92rem;
+      }
+
+      .benefit-item,
+      .area-item {
+        padding: 0.9rem;
       }
 
       .faq-entry summary {
@@ -481,6 +567,7 @@
           <p><a href="index.html">Home</a></p>
           <p><a href="about.html">About Us</a></p>
           <p><a href="products.html">Products</a></p>
+          <p><a href="nairobi.html">Nairobi Prices</a></p>
           <p><a href="contact.html">Contact</a></p>
           <p><a href="privacy-policy.html">Privacy Policy</a></p>
         </div>
