@@ -4,19 +4,295 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | Bamburi Cement</title>
+  <meta name="description" content="Read the Bamburi Cement privacy policy and learn how contact details and enquiry information are handled.">
+  <link rel="icon" href="favicon.jpeg" type="image/jpeg">
+  <link rel="shortcut icon" href="favicon.jpeg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .policy-hero {
+      padding: clamp(3.25rem, 7vw, 5.5rem) 0 2.5rem;
+      background:
+        linear-gradient(135deg, rgba(232, 244, 236, 0.96), rgba(245, 248, 244, 0.98)),
+        radial-gradient(circle at top right, rgba(25, 135, 84, 0.12), transparent 35%);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .policy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.95rem;
+      border-radius: 999px;
+      background: var(--bg-white);
+      color: var(--primary-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1rem;
+    }
+
+    .policy-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.9rem);
+      color: var(--primary-dark);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .policy-hero p {
+      max-width: 64ch;
+      color: var(--text-light);
+      font-size: 1.06rem;
+    }
+
+    .policy-main {
+      padding: 2.5rem 0 4.5rem;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(260px, 0.95fr);
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    .policy-card,
+    .policy-side-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: 26px;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .policy-card {
+      padding: clamp(1.35rem, 3vw, 2.25rem);
+    }
+
+    .policy-block + .policy-block {
+      margin-top: 1.75rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .policy-block h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: var(--primary-dark);
+      font-size: 1.35rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .policy-block h2 i {
+      color: #198754;
+    }
+
+    .policy-block p,
+    .policy-block li {
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .policy-block ul {
+      margin-top: 0.8rem;
+      padding-left: 1.2rem;
+    }
+
+    .policy-block li + li {
+      margin-top: 0.5rem;
+    }
+
+    .policy-side-card {
+      padding: 1.4rem;
+      position: sticky;
+      top: 108px;
+    }
+
+    .policy-side-card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 0.9rem;
+    }
+
+    .policy-side-card p,
+    .policy-side-card li {
+      color: var(--text-light);
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+
+    .policy-side-card ul {
+      list-style: none;
+      margin-top: 0.8rem;
+    }
+
+    .policy-side-card li + li {
+      margin-top: 0.65rem;
+    }
+
+    .policy-contact {
+      margin-top: 1.1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .policy-contact a {
+      color: #198754;
+      font-weight: 600;
+    }
+
+    .footer-simple {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 2rem 0 1.5rem;
+      margin-top: 0;
+    }
+
+    .footer-simple-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-simple p,
+    .footer-simple a {
+      color: var(--footer-text);
+      font-size: 0.92rem;
+    }
+
+    .footer-simple a:hover {
+      color: var(--primary-orange);
+    }
+
+    @media (max-width: 920px) {
+      .policy-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .policy-side-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .policy-hero {
+        padding-top: 2.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
-    <section class="contact-block">
-      <div class="contact-info">
-        <h1 class="section-title">Privacy Policy</h1>
-        <p>We collect contact details you share with us when placing an order or requesting a quote.</p>
-        <p>We use this information only to respond to enquiries, process orders, and coordinate delivery.</p>
-        <p>We do not sell your personal information to third parties.</p>
-        <p>If you need your details updated or removed, contact us at <a href="mailto:info@bamburicementkenya.co.ke">info@bamburicementkenya.co.ke</a>.</p>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo-area">
+        <img src="logo.jpeg" alt="Bamburi special products" class="site-logo">
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="privacy-policy.html" class="active">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="policy-hero">
+      <div class="container">
+        <span class="policy-badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> Your Privacy Matters</span>
+        <h1>Privacy Policy</h1>
+        <p>This page explains what information we may collect when you contact Bamburi Cement, how that information is used, and how you can request updates or removal of your personal details.</p>
+      </div>
+    </section>
+
+    <section class="policy-main">
+      <div class="container policy-layout">
+        <article class="policy-card">
+          <section class="policy-block">
+            <h2><i class="fas fa-database" aria-hidden="true"></i> Information We Collect</h2>
+            <p>We may collect the basic details you share when requesting a quote, placing an order, or contacting us for support. This can include your name, phone number, email address, delivery details, and any information you include in your message.</p>
+          </section>
+
+          <section class="policy-block">
+            <h2><i class="fas fa-cogs" aria-hidden="true"></i> How We Use Your Information</h2>
+            <p>We use the information you provide to respond to enquiries, prepare quotations, process orders, coordinate delivery, and offer customer support. We may also use contact details to follow up on an ongoing request you initiated with us.</p>
+          </section>
+
+          <section class="policy-block">
+            <h2><i class="fas fa-user-lock" aria-hidden="true"></i> Data Protection</h2>
+            <p>We take reasonable steps to keep your information secure and limit access to people who need it for customer service, order handling, or delivery coordination.</p>
+          </section>
+
+          <section class="policy-block">
+            <h2><i class="fas fa-share-alt" aria-hidden="true"></i> Sharing of Information</h2>
+            <p>We do not sell your personal information. Information may only be shared when necessary to complete an order, support a delivery request, or comply with legal obligations.</p>
+          </section>
+
+          <section class="policy-block">
+            <h2><i class="fas fa-clock" aria-hidden="true"></i> Retention</h2>
+            <p>We keep customer communication and order-related details only for as long as reasonably necessary to manage requests, provide support, and maintain basic business records.</p>
+          </section>
+
+          <section class="policy-block">
+            <h2><i class="fas fa-edit" aria-hidden="true"></i> Your Choices</h2>
+            <p>You may contact us at any time if you want your information corrected, updated, or removed where applicable.</p>
+            <ul>
+              <li>Request an update to your contact details.</li>
+              <li>Ask us to remove information you previously shared.</li>
+              <li>Contact us for clarification on how your details were used.</li>
+            </ul>
+          </section>
+        </article>
+
+        <aside class="policy-side-card">
+          <h3>Quick Summary</h3>
+          <p>We only use the information you share with us to help handle enquiries, orders, and delivery support.</p>
+          <ul>
+            <li><strong>No selling:</strong> Your personal data is not sold to third parties.</li>
+            <li><strong>Limited use:</strong> We use details only for service and communication.</li>
+            <li><strong>Your control:</strong> You can ask for correction or removal of your details.</li>
+          </ul>
+
+          <div class="policy-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@bamburicementkenya.co.ke">info@bamburicementkenya.co.ke</a></p>
+            <p>Phone: <a href="tel:+254750210207">+254 750 210 207</a></p>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
+
+  <footer class="footer-simple">
+    <div class="container footer-simple-inner">
+      <p>&copy; 2026 Bamburi Cement. All rights reserved.</p>
+      <p><a href="index.html">Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        const icon = menuToggle.querySelector('i');
+        icon.className = navLinks.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
+      });
+    }
+  </script>
 </body>
 </html>
