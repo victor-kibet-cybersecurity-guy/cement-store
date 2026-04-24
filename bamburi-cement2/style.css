@@ -80,42 +80,10 @@ a {
   flex: 1;
 }
 
-.logo-img {
-  flex-shrink: 0;
-  width: 60px;
-  height: 60px;
-  background: #d9a74f;
-  border-radius: var(--border-radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.logo-icon {
-  font-size: 2.5rem;
-  color: var(--primary-dark);
-}
-
-.company-name {
-  flex: 1;
-  min-width: 0;
-  line-height: 1.2;
-}
-
-.company-name h1 {
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
-.company-name span {
-  font-size: clamp(0.7rem, 2.5vw, 0.9rem);
-  color: #c0cfde;
-  font-weight: 400;
+.site-logo {
   display: block;
-  white-space: nowrap;
+  width: min(100%, 460px);
+  height: auto;
 }
 
 .menu-toggle {
@@ -810,23 +778,8 @@ a {
 }
 
 @media (max-width: 480px) {
-  .logo-area {
-    gap: 0.5rem;
-  }
-  
-  .logo-img {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .company-name h1 {
-    white-space: normal;
-    font-size: 1.1rem;
-  }
-  
-  .company-name span {
-    white-space: normal;
-    font-size: 0.65rem;
+  .site-logo {
+    width: min(100%, 300px);
   }
   
   .section-title::after {
