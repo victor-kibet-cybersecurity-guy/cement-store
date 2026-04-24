@@ -454,6 +454,52 @@
       color: #b8c9bf;
     }
 
+    .floating-wa {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      width: clamp(60px, 10vw, 70px);
+      height: clamp(60px, 10vw, 70px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      z-index: 99;
+      transition: 0.2s;
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.1);
+      background: #20b859;
+    }
+
+    .floating-call {
+      position: fixed;
+      bottom: 110px;
+      right: 30px;
+      background: #007bff;
+      width: clamp(60px, 10vw, 70px);
+      height: clamp(60px, 10vw, 70px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      z-index: 99;
+      transition: 0.2s;
+    }
+
+    .floating-call:hover {
+      transform: scale(1.1);
+      background: #0056b3;
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .story-grid,
@@ -517,6 +563,16 @@
       .leader-card,
       .stat-item {
         padding: 1.4rem;
+      }
+
+      .floating-wa {
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .floating-call {
+        bottom: 100px;
+        right: 20px;
       }
     }
   </style>
@@ -731,6 +787,14 @@
       </div>
     </div>
   </footer>
+
+  <a href="tel:+254750210207" class="floating-call" aria-label="Call us">
+    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+  </a>
+
+  <a href="https://wa.me/254750210207" class="floating-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
 
   <script>
     const menuToggle = document.getElementById('menuToggle');
