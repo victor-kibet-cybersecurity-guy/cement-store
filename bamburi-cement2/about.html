@@ -500,6 +500,16 @@
       background: #0056b3;
     }
 
+    @media (max-width: 1120px) {
+      .navbar {
+        gap: 0.85rem 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .story-grid,
@@ -541,10 +551,31 @@
 
       .nav-links a {
         width: 100%;
+        padding: 0.75rem;
+        border-radius: 12px;
+      }
+
+      .nav-links a.active {
+        border-bottom: none;
+        background: rgba(243, 179, 61, 0.12);
       }
     }
 
     @media (max-width: 640px) {
+      .container {
+        padding: 0 0.95rem;
+      }
+
+      .hero-about,
+      .mission-vision,
+      .our-story,
+      .values-section,
+      .bamburi-plant,
+      .leadership,
+      .sustainability {
+        padding: 2.75rem 0;
+      }
+
       .site-logo {
         width: clamp(135px, 44vw, 190px);
       }
@@ -558,11 +589,47 @@
         font-size: 1rem;
       }
 
+      .hero-badge {
+        font-size: 0.74rem;
+        padding: 0.5rem 0.75rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .story-text h2,
+      .plant-copy h2 {
+        font-size: 1.6rem;
+      }
+
       .mv-card,
       .value-item,
       .leader-card,
       .stat-item {
         padding: 1.4rem;
+      }
+
+      .hero-image,
+      .story-image,
+      .plant-image {
+        min-height: 240px;
+      }
+
+      .hero-image img,
+      .story-image img,
+      .plant-image img {
+        min-height: 240px;
+      }
+
+      .leader-img {
+        width: 88px;
+        height: 88px;
+        font-size: 2.1rem;
+      }
+
+      .footer {
+        padding-bottom: 6rem;
       }
 
       .floating-wa {
@@ -573,6 +640,40 @@
       .floating-call {
         bottom: 100px;
         right: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero-content p,
+      .story-text p,
+      .plant-copy p,
+      .value-item p,
+      .leader-bio,
+      .footer-col p,
+      .footer-links li,
+      .copyright {
+        font-size: 0.95rem;
+      }
+
+      .mv-card,
+      .value-item,
+      .leader-card,
+      .stat-item {
+        padding: 1rem;
+        border-radius: 20px;
+      }
+
+      .hero-image,
+      .story-image,
+      .plant-image,
+      .mv-card,
+      .value-item,
+      .leader-card {
+        border-radius: 20px;
       }
     }
   </style>
