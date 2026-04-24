@@ -92,6 +92,11 @@ a {
   overflow: hidden;
 }
 
+.logo-icon {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+}
+
 .company-name {
   flex: 1;
   min-width: 0;
@@ -170,6 +175,18 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.slide-fundi {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("bamburi%20fundi.jpeg");
+}
+
+.slide-nguvu {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("bamburi%20nguvu.jpeg");
+}
+
+.slide-duracem {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("bamburi%20duracem.jpeg");
 }
 
 .slide::after {
@@ -339,6 +356,12 @@ a {
   transition: transform 0.3s;
 }
 
+.product-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .product-card:hover .product-image img {
   transform: scale(1.05);
 }
@@ -443,6 +466,14 @@ a {
 
 .info-card a:hover {
   text-decoration: underline;
+}
+
+.accent-link {
+  color: var(--primary-orange);
+}
+
+.accent-icon {
+  color: var(--primary-orange);
 }
 
 /* ===== TESTIMONIALS GRID ===== */
@@ -654,6 +685,15 @@ a {
   color: white;
   margin-bottom: 1rem;
   font-size: 1.2rem;
+}
+
+.footer-brand-icon {
+  font-size: 2rem;
+  color: var(--primary-orange);
+}
+
+.footer-highlight {
+  color: white;
 }
 
 .footer-col p {

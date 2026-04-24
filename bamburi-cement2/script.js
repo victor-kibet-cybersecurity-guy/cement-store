@@ -26,7 +26,7 @@
       html += `
         <div class="product-card">
           <div class="product-image">
-            <img src="${p.image}" alt="${p.name}" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+            <img src="${p.image}" alt="${p.name}" loading="lazy" class="product-photo">
           </div>
           <div class="product-details">
             <h3 class="product-name">${p.name}</h3>
@@ -34,7 +34,7 @@
             <p class="product-desc">${p.desc}</p>
             <div class="product-price">${p.price} <small>per bag</small></div>
             <button class="contact-order" onclick="window.open('https://wa.me/254750210207?text=${encodeURIComponent('Hello, I am interested in ' + p.name)}', '_blank')">
-              <i class="fab fa-whatsapp"></i> Order via WhatsApp
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp
             </button>
           </div>
         </div>
