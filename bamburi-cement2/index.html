@@ -141,13 +141,17 @@
   </script>
   
   <!-- Favicon -->
-  <link rel="icon" href="favicon.jpeg" type="image/jpeg">
-  <link rel="shortcut icon" href="favicon.jpeg" type="image/jpeg">
+  <link rel="icon" href="static/optimized/favicon.jpg" type="image/jpeg">
+  <link rel="shortcut icon" href="static/optimized/favicon.jpg" type="image/jpeg">
   
   <!-- Preconnect for Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
+  <!-- Critical asset preload -->
+  <link rel="preload" as="image" href="static/optimized/logo.jpg">
+  <link rel="preload" as="image" href="static/optimized/bamburi-fundi.jpg">
+
   <!-- Stylesheets -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=optional" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -158,7 +162,7 @@
   <header class="header">
     <div class="container header-content">
       <div class="logo-area">
-        <img src="logo.jpeg" alt="Bamburi special products" class="site-logo">
+        <img src="static/optimized/logo.jpg" alt="Bamburi special products" class="site-logo" width="250" height="77" decoding="async">
       </div>
       
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
@@ -174,16 +178,6 @@
         <a href="privacy-policy.html">Privacy Policy</a>
       </nav>
     </div>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DMJF60B53L">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DMJF60B53L');
-</script>
   </header>
 
   <main>
@@ -260,7 +254,7 @@
     </section>
 
     <!-- About & Delivery Section -->
-    <section id="about" class="container">
+    <section id="about" class="container deferred-section">
       <div class="info-grid">
         <div class="info-card">
           <h3><i class="fas fa-phone-alt accent-icon" aria-hidden="true"></i> Contact Us</h3>
@@ -287,7 +281,7 @@
     </section>
 
     <!-- Customer Reviews Section - 6 Testimonials -->
-    <section class="container">
+    <section class="container deferred-section">
       <h2 class="section-title">Customer Reviews</h2>
       <div class="testimonials-grid">
         <div class="testimonial-card">
@@ -358,7 +352,7 @@
       </div>
     </section>
 
-    <section class="container faq-section" id="faqs">
+    <section class="container faq-section deferred-section" id="faqs">
       <h2 class="section-title">Frequently Asked Questions</h2>
       <p class="faq-intro">Here are quick answers to the questions customers ask most often before ordering cement, paving blocks, or Kentanks from us.</p>
       <div class="faq-grid">
@@ -450,7 +444,7 @@
     </section>
 
     <!-- Contact & Map Section -->
-    <section id="contact" class="container">
+    <section id="contact" class="container deferred-section">
       <div class="contact-block">
         <div class="contact-info">
           <h2>&#128205; Visit Our Office</h2>
@@ -486,9 +480,7 @@
         <div class="map-container">
           <iframe src="https://maps.google.com/maps?q=Bamburi%20Cement%20Mombasa%20Road&output=embed" 
                   allowfullscreen 
-                  title="Bamburi Cement Location"
-                  width="100%" 
-                  height="100%">
+                  title="Bamburi Cement Location">
           </iframe>
         </div>
       </div>
@@ -554,6 +546,18 @@
   </a>
 
   <!-- JavaScript -->
+  <script>
+    if (location.hostname !== '127.0.0.1' && location.hostname !== 'localhost') {
+      const analyticsScript = document.createElement('script');
+      analyticsScript.async = true;
+      analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-DMJF60B53L';
+      document.head.appendChild(analyticsScript);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-DMJF60B53L');
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

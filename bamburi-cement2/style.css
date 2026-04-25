@@ -70,6 +70,11 @@ a {
   padding: 0 clamp(1rem, 4vw, 2.5rem);
 }
 
+.deferred-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
+}
+
 /* ===== HEADER & NAVIGATION ===== */
 .header {
   background: rgba(23, 50, 37, 0.96);
@@ -180,15 +185,15 @@ a {
 }
 
 .slide-fundi {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("bamburi%20fundi.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("static/optimized/bamburi-fundi.jpg");
 }
 
 .slide-nguvu {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("bamburi%20nguvu.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("static/optimized/bamburi-nguvu.jpg");
 }
 
 .slide-duracem {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("bamburi%20duracem.jpeg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("static/optimized/bamburi-duracem.jpg");
 }
 
 .slide::after {
@@ -994,12 +999,18 @@ a {
   
   /* Floating buttons mobile adjustments */
   .floating-wa {
-    bottom: 20px;
-    right: 20px;
+    bottom: 16px;
+    right: 16px;
+    width: 56px;
+    height: 56px;
+    font-size: 1.9rem;
   }
   .floating-call {
-    bottom: 100px;  /* 20px + 70px + 10px gap */
-    right: 20px;
+    bottom: 80px;
+    right: 16px;
+    width: 56px;
+    height: 56px;
+    font-size: 1.9rem;
   }
   
   .contact-item {
@@ -1109,18 +1120,18 @@ a {
 
   .floating-wa,
   .floating-call {
-    width: 52px;
-    height: 52px;
-    right: 10px;
-    font-size: 1.55rem;
+    width: 48px;
+    height: 48px;
+    right: 8px;
+    font-size: 1.35rem;
   }
 
   .floating-wa {
-    bottom: 10px;
+    bottom: 8px;
   }
 
   .floating-call {
-    bottom: 68px;
+    bottom: 60px;
   }
 }
 
