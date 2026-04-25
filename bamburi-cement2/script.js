@@ -30,7 +30,7 @@
             <p class="product-desc">${p.desc}</p>
             <div class="product-price">${p.price} <small>per bag</small></div>
             <button class="contact-order" onclick="window.open('https://wa.me/254750210207?text=${encodeURIComponent('Hello, I am interested in ' + p.name)}', '_blank')">
-              <i class="fab fa-whatsapp" aria-hidden="true"></i> Order via WhatsApp
+              Order via WhatsApp
             </button>
           </div>
         </div>
@@ -68,13 +68,39 @@
   }
 
   function initSlider() {
+    const slider = document.getElementById('slider');
     const wrapper = document.getElementById('sliderWrapper');
     const dots = document.querySelectorAll('.slider-dot');
     const prev = document.getElementById('prevSlide');
     const next = document.getElementById('nextSlide');
+    const lazySlides = document.querySelectorAll('.slide[data-bg]');
 
-    if (!wrapper || !dots.length) {
+    if (!slider || !wrapper || !dots.length) {
       return;
+    }
+
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (isMobile) {
+      slider.classList.add('mobile-static');
+      return;
+    }
+
+    function loadDeferredSlideImages() {
+      lazySlides.forEach((slide) => {
+        if (slide.dataset.bgLoaded === 'true') {
+          return;
+        }
+
+        slide.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("${slide.dataset.bg}")`;
+        slide.dataset.bgLoaded = 'true';
+      });
+    }
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadDeferredSlideImages, { timeout: 1500 });
+    } else {
+      window.setTimeout(loadDeferredSlideImages, 600);
     }
 
     let currentIndex = 0;
@@ -129,8 +155,10 @@
     if (toggle && nav) {
       toggle.addEventListener('click', () => {
         nav.classList.toggle('show');
-        const icon = toggle.querySelector('i');
-        icon.className = nav.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
+        const icon = toggle.querySelector('.menu-toggle-icon');
+        if (icon) {
+          icon.textContent = nav.classList.contains('show') ? 'Close' : 'Menu';
+        }
       });
     }
   }
