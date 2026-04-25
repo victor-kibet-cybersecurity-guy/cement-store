@@ -87,10 +87,8 @@
 
     toggle.addEventListener('click', () => {
       nav.classList.toggle('show');
-      const icon = toggle.querySelector('.menu-toggle-icon');
-      if (icon) {
-        icon.textContent = nav.classList.contains('show') ? 'Close' : 'Menu';
-      }
+      toggle.classList.toggle('is-open', nav.classList.contains('show'));
+      toggle.setAttribute('aria-expanded', nav.classList.contains('show') ? 'true' : 'false');
     });
   }
 
