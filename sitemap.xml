@@ -1,39 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://ian127502.github.io/bamburi-cement/</loc>
-  <lastmod>2026-02-21T06:58:56+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://ian127502.github.io/bamburi-cement/about.html</loc>
-</url>
-
-<url>
-  <loc>https://ian127502.github.io/bamburi-cement/contact.html</loc>
-</url>
-
-<url>
-  <loc>https://ian127502.github.io/bamburi-cement/products.html</loc>
-</url>
-
-<url>
-  <loc>https://ian127502.github.io/bamburi-cement/privacy-policy.html</loc>
-</url>
-
-<url>
-  <loc>https://ian127502.github.io/bamburi-cement/nairobi.html</loc>
-</url>
-
-<url>
-  <loc>https://ian127502.github.io/bamburi-cement/descriptions.html</loc>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bamburicementkenya.co.ke/</loc>
+  </url>
+  <url>
+    <loc>https://bamburicementkenya.co.ke/about.html</loc>
+  </url>
+  <url>
+    <loc>https://bamburicementkenya.co.ke/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://bamburicementkenya.co.ke/products.html</loc>
+  </url>
+  <url>
+    <loc>https://bamburicementkenya.co.ke/privacy-policy.html</loc>
+  </url>
+  <url>
+    <loc>https://bamburicementkenya.co.ke/nairobi.html</loc>
+  </url>
+  <url>
+    <loc>https://bamburicementkenya.co.ke/descriptions.html</loc>
+  </url>
 </urlset>
