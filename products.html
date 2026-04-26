@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bamburi Cement Products | Fundi, Tembo, Nguvu, High-quality cement in kenya</title>
+  <meta name="description" content="Browse Bamburi Cement products including Fundi, Tembo and Nguvu. High-quality cement solutions for construction, masonry and infrastructure in Kenya.">
+  <meta name="keywords" content="Bamburi Cement, Fundi Cement, Tembo Cement, Nguvu Cement, cement Kenya, construction materials, building cement, masonry cement, concrete solutions">
+  <meta name="author" content="Bamburi Cement Group">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bamburicementkenya.co.ke/products.html">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Bamburi Cement Products | High-Quality Cement Solutions in Kenya">
+  <meta property="og:description" content="Explore Fundi, Tembo and Nguvu cement products for durable and reliable construction.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bamburicementkenya.co.ke/products.html">
+  <meta property="og:image" content="https://bamburicementkenya.co.ke/bamburi-fundi.jpg">
+  <link rel="icon" href="favicon.jpg" type="image/jpeg">
+  <link rel="shortcut icon" href="favicon.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .products-hero {
+      padding: clamp(3rem, 7vw, 5.5rem) 0 2.75rem;
+      background:
+        linear-gradient(135deg, rgba(232, 244, 236, 0.96), rgba(245, 248, 244, 0.98)),
+        radial-gradient(circle at top right, rgba(25, 135, 84, 0.12), transparent 38%);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .products-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.95rem;
+      border-radius: 999px;
+      background: var(--bg-white);
+      color: var(--primary-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1rem;
+    }
+
+    .products-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      color: var(--primary-dark);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .products-hero p {
+      max-width: 64ch;
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+
+    .catalog-main {
+      padding: 2.5rem 0 4rem;
+    }
+
+    .catalog-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .catalog-tab {
+      border: 0;
+      border-radius: 999px;
+      background: #e9f3eb;
+      color: var(--primary-dark);
+      padding: 0.85rem 1.25rem;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .catalog-tab:hover {
+      transform: translateY(-1px);
+    }
+
+    .catalog-tab.active {
+      background: var(--primary-dark);
+      color: #ffffff;
+    }
+
+    .catalog-panel {
+      display: none;
+    }
+
+    .catalog-panel.active {
+      display: block;
+    }
+
+    .catalog-note {
+      background: #ecf6ef;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid #198754;
+      border-radius: 18px;
+      padding: 1rem 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .products-grid-page {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-page-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-page-image {
+      aspect-ratio: 1 / 1;
+      background: #edf4ef;
+    }
+
+    .product-page-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-page-content {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+    }
+
+    .product-page-content h3 {
+      color: var(--primary-dark);
+      font-size: 1.35rem;
+    }
+
+    .product-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      color: var(--text-light);
+      font-size: 0.92rem;
+    }
+
+    .product-page-content p {
+      color: var(--text-light);
+      line-height: 1.55;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: auto;
+    }
+
+    .product-price-page {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #198754;
+    }
+
+    .product-price-page small {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    .product-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: var(--primary-dark);
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 0.8rem 1rem;
+      font-weight: 700;
+    }
+
+    .coming-soon {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      padding: 1.5rem;
+      color: var(--text-light);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .price-list {
+      margin-top: 0.25rem;
+      padding-left: 1.1rem;
+      color: var(--text-light);
+    }
+
+    .price-list li + li {
+      margin-top: 0.45rem;
+    }
+
+    @media (max-width: 768px) {
+      .products-hero {
+        padding-top: 2.5rem;
+      }
+
+      .catalog-tabs {
+        gap: 0.7rem;
+      }
+
+      .catalog-tab {
+        width: 100%;
+        text-align: center;
+      }
+
+      .product-bottom {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .product-action {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .products-hero h1 {
+        font-size: 2rem;
+      }
+
+      .catalog-main {
+        padding-top: 2rem;
+      }
+
+      .product-page-content {
+        padding: 1rem;
+      }
+
+      .product-page-content h3 {
+        font-size: 1.18rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo-area">
+        <img src="logo.jpg" alt="Bamburi special products" class="site-logo" width="250" height="77" decoding="async">
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="nairobi.html">Nairobi Prices</a>
+        <a href="descriptions.html">Descriptions</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="products-hero">
+      <div class="container">
+        <span class="products-badge"><i class="fas fa-layer-group" aria-hidden="true"></i> Product Catalogue</span>
+        <h1>Our Product</h1>
+        <p>Browse our high-quality bamburi cement products, Paving blocks and Kentanks.</p>
+      </div>
+    </section>
+
+    <section class="catalog-main">
+      <div class="container">
+        <div class="catalog-tabs" id="catalogTabs">
+          <button class="catalog-tab active" data-tab="cement" type="button">bamburi   Cement</button>
+          <button class="catalog-tab" data-tab="paving" type="button">Paving Blocks</button>
+          <button class="catalog-tab" data-tab="kentanks" type="button">Kentanks</button>
+        </div>
+
+        <section class="catalog-panel active" id="tab-cement">
+          <div class="catalog-note">bamburi fundi, bamburi Tembo, bamburi Nguvu, building materials, Nairobi, Mombasa, Nakuru </div>
+          <div class="products-grid-page">
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="bamburi-fundi.jpg" alt="Fundi Cement" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Fundi Cement</h3>
+                <div class="product-meta"><span>Fundi</span><span>32.5R - 50kg</span></div>
+                <p>Designed for masonry, block making, and plastering.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 650<small>per bag</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Fundi%20Cement" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="bamburi-tembo.jpg" alt="Tembo Cement" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Tembo Cement</h3>
+                <div class="product-meta"><span>Tembo</span><span>42.5N - 50kg</span></div>
+                <p>Extra strength for heavy load structures.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 690<small>per bag</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Tembo%20Cement" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="bamburi-nguvu.jpg" alt="Nguvu Cement" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Nguvu Cement</h3>
+                <div class="product-meta"><span>Nguvu</span><span>42.5R - 50kg</span></div>
+                <p>High early strength for faster formwork removal.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 740<small>per bag</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Nguvu%20Cement" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="bamburi-powermax.jpg" alt="Powermax" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Powermax</h3>
+                <div class="product-meta"><span>Powermax</span><span>52.5N - 50kg</span></div>
+                <p>Premium cement for high-rise and precast applications.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 950<small>per bag</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Powermax" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="bamburi-duracem.jpg" alt="Duracem" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Duracem</h3>
+                <div class="product-meta"><span>Duracem</span><span>42.5N - 50kg</span></div>
+                <p>Suitable for marine and aggressive soil conditions.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 1,050<small>per bag</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Duracem" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="bamburi-power-plus.jpg" alt="Powerplus" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Powerplus</h3>
+                <div class="product-meta"><span>Powerplus</span><span>52.5R - 50kg</span></div>
+                <p>Ultra-high strength cement for demanding structural work.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 1,000<small>per bag</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Powerplus" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="bamburi-powercrete.jpg" alt="Powercrete" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Powercrete</h3>
+                <div class="product-meta"><span>Powercrete</span><span>42.5R blended</span></div>
+                <p>Low heat cement ideal for mass concrete applications.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 1,250<small>per bag</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Powercrete" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="bamburi-seti-300.jpg" alt="Seti 300" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Seti 300</h3>
+                <div class="product-meta"><span>Seti 300</span><span>32.5N - 25kg</span></div>
+                <p>Cementitious adhesive for fixing ceramic, terracotta, and natural stone tiles.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 400<small>per bag</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Seti%20300" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="catalog-panel" id="tab-paving">
+          <div class="catalog-note">Paving blocks suitable for compounds, driveways, walkways, parking areas, and commercial spaces.</div>
+          <div class="products-grid-page">
+            <article class="product-page-card">
+              <div class="product-page-image"><img src="cabro-pic.jpg" alt="Paving blocks" loading="lazy" decoding="async"></div>
+              <div class="product-page-content">
+                <h3>Paving Blocks</h3>
+                <div class="product-meta"><span>Cabro</span><span>Square metre supply</span></div>
+                <p>Strong, neat, and durable paving blocks for residential and commercial outdoor surfaces.</p>
+                <div class="product-bottom">
+                  <div class="product-price-page">KES 800<small>per square metre</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Paving%20Blocks" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="catalog-panel" id="tab-kentanks">
+          <div class="catalog-note">Kentanks available in multiple sizes with free delivery countrywide.</div>
+          <div class="products-grid-page">
+              <article class="product-page-card">
+                <div class="product-page-image">
+                <img src="ken-tank.jpg" alt="1000L cylindrical Kentank water tank" loading="lazy" decoding="async">
+                </div>
+                <div class="product-page-content">
+                <h3>1000L Cylindrical Tank</h3>
+                <div class="product-meta"><span>Water Storage</span><span>KES 4,500</span></div>
+                <p>Strong Kentank water storage solution for homes, small businesses, rental units, and general daily use.</p>
+                <ul class="price-list">
+                  <li>1000 Litres - KES 4,500</li>
+                  <li>2000 Litres - KES 10,500</li>
+                  <li>3000 Litres - KES 14,500</li>
+                  <li>4000 Litres - KES 18,500</li>
+                  <li>5000 Litres - KES 24,500</li>
+                  <li>6000 Litres - KES 27,500</li>
+                  <li>8000 Litres - KES 32,500</li>
+                  <li>10000 Litres - KES 38,500</li>
+                </ul>
+                <div class="product-bottom">
+                  <div class="product-price-page">Free Delivery<small>countrywide</small></div>
+                  <a class="product-action" href="https://wa.me/254750210207?text=Hello,%20I%20am%20interested%20in%20Kentanks" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Order</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <i class="fas fa-building footer-brand-icon" aria-hidden="true"></i>
+          <h4>Bamburi Cement Ltd</h4>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+254750210207">+254 750 210 207</a></p>
+          <p><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/254750210207">+254 750 210 207</a></p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@bamburicementkenya.co.ke">info@bamburicementkenya.co.ke</a></p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="about.html">About Us</a></p>
+          <p><a href="products.html">Products</a></p>
+          <p><a href="nairobi.html">Nairobi Prices</a></p>
+          <p><a href="descriptions.html">Descriptions</a></p>
+          <p><a href="contact.html">Contact</a></p>
+          <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Delivery Info</h4>
+          <p><i class="fas fa-truck accent-icon" aria-hidden="true"></i> <strong class="footer-highlight">Fast Free delivery across Kenya</strong></p>
+          <p><i class="far fa-clock accent-icon" aria-hidden="true"></i> Within 72 hours</p>
+          <p><i class="fas fa-weight accent-icon" aria-hidden="true"></i> free delivery on orders over KES 10,000</p>
+          <p><i class="fas fa-map-marker-alt accent-icon" aria-hidden="true"></i> Nationwide coverage</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Payment Info</h4>
+          <p>Kindly we requesting full payment before delivery to help secure the materials and begin processing your order. This also ensures commitment on both sides and allows us to serve you faster and more efficiently.</p>
+        </div>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://x.com/" aria-label="X"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bamburi Cement &ndash; Official Website. All rights reserved. | <a href="sitemap.xml">Sitemap</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="tel:+254750210207" class="floating-call" aria-label="Call us">
+    <svg class="floating-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.36 2.28.54 3.5.54a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4.7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.18 2.4.54 3.5a1 1 0 0 1-.24 1l-2.2 2.2Z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <a href="https://wa.me/254750210207" class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg class="floating-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path d="M27.2 4.8A15.2 15.2 0 0 0 3.4 23.1L1.7 30.3l7.4-1.6A15.2 15.2 0 1 0 27.2 4.8Zm-11.1 23c-2.2 0-4.3-.6-6.2-1.8l-.4-.2-4.4 1 .9-4.3-.3-.4a12.7 12.7 0 1 1 10.4 5.7Zm7-9.6c-.4-.2-2.4-1.2-2.8-1.4-.4-.1-.6-.2-.9.2l-.8 1c-.2.3-.5.3-.9.1-2.4-1.2-4-2.2-5.6-5-.2-.4 0-.6.2-.8l.7-.8c.2-.2.3-.5.4-.7.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.3-3-.3-.8-.7-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.4.4-1.5 1.5-1.5 3.6s1.5 4.2 1.7 4.5c.2.3 3 4.6 7.2 6.4 1 .4 1.8.7 2.4.9 1 .3 1.9.2 2.6.1.8-.1 2.4-1 2.8-2 .3-.9.3-1.8.2-2-.1-.2-.4-.3-.8-.5Z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const tabs = document.querySelectorAll('.catalog-tab');
+    const panels = document.querySelectorAll('.catalog-panel');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        const icon = menuToggle.querySelector('i');
+        icon.className = navLinks.classList.contains('show') ? 'fas fa-times' : 'fas fa-bars';
+      });
+    }
+
+    function activateTab(tabName) {
+      const target = `tab-${tabName}`;
+
+      tabs.forEach((item) => {
+        item.classList.toggle('active', item.dataset.tab === tabName);
+      });
+
+      panels.forEach((panel) => {
+        panel.classList.toggle('active', panel.id === target);
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        activateTab(tab.dataset.tab);
+        history.replaceState(null, '', `#tab-${tab.dataset.tab}`);
+      });
+    });
+
+    const initialHash = window.location.hash.replace('#tab-', '');
+    if (initialHash && document.getElementById(`tab-${initialHash}`)) {
+      activateTab(initialHash);
+    }
+  </script>
+</body>
+</html>
